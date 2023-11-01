@@ -288,7 +288,7 @@ def main_wo_bpe():
     MIN_FREQ = opt.min_word_count
 
     if not all([opt.data_src, opt.data_trg]):
-        assert {opt.lang_src, opt.lang_trg} == {'de', 'en'}
+        assert {opt.lang_src, opt.lang_trg} == {'de_core_news_sm', 'en_core_web_sm'}
     else:
         # Pack custom txt file into example datasets
         raise NotImplementedError
