@@ -246,7 +246,7 @@ def main_wo_bpe():
     Usage: python preprocess.py -lang_src de -lang_trg en -save_data multi30k_de_en.pkl -share_vocab
     '''
 
-    spacy_support_langs = ['de', 'el', 'en', 'es', 'fr', 'it', 'lt', 'nb', 'nl', 'pt']
+    spacy_support_langs = ['de', 'el', 'en', 'es', 'fr', 'it', 'lt', 'nb', 'nl', 'pt', 'de_core_news_sm', 'en_core_web_sm']
 
     parser = argparse.ArgumentParser()
     parser.add_argument('-lang_src', required=True, choices=spacy_support_langs)
