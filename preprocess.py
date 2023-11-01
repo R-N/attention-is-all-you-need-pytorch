@@ -297,7 +297,7 @@ def main_wo_bpe():
         return len(vars(x)['src']) <= MAX_LEN and len(vars(x)['trg']) <= MAX_LEN
 
     train, val, test = torchtext.datasets.Multi30k.splits(
-            exts = ('.' + opt.lang_src, '.' + opt.lang_trg),
+            exts = ('.' + opt.lang_src.split("_", maxsplit=1)[0], '.' + opt.lang_trg.split("_", maxsplit=1)[0]),
             fields = (SRC, TRG),
             filter_pred=filter_examples_with_length)
 
